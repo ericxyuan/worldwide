@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f4f3ed">
+  <meta name="description" content="A personal atlas. Explore a globe, discover countries and their regions, and remember your travels in your browser.">
+  <title>Worldwide — your personal atlas</title>
+  <link rel="icon" type="image/png" href="assets/worldwide.png">
+  <link rel="apple-touch-icon" href="assets/worldwide.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="vendor/d3.min.js"></script>
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#region-list">Skip to regions</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Atlas navigation">
+      <a class="brand" href="./" aria-label="Worldwide home"><img class="brand-icon" src="assets/worldwide.png" alt="" width="43" height="43"><span>Worldwide<span class="brand-caption">THE PERSONAL ATLAS</span></span></a>
+      <div class="sidebar-content">
+        
+        <div class="section-title"><h1 id="parent-name">Earth</h1></div>
+        <p id="parent-native" class="parent-native">7 continents</p>
+        <div class="progress-card">
+          <div id="progress-ring" class="progress-ring"><span id="percentage">0<span>%</span></span></div>
+          <div><span class="small-label">DISCOVERED</span><p id="progress-count">Loading your atlas…</p><span id="progress-kind" class="subtle">Immediate children only</span></div>
+        </div>
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find a continent…" aria-label="Find a region in this view" autocomplete="off"><kbd>/</kbd></label>
+        <div class="list-heading"><span id="list-heading">CONTINENTS</span><div class="list-filters" role="group" aria-label="Filter regions"><button id="filter-all" aria-pressed="true">All</button><button id="filter-visited" aria-pressed="false">Visited</button></div></div>
+        <div id="region-list" class="region-list" tabindex="-1" aria-label="Regions"><p class="empty">Preparing your atlas…</p></div>
+        <div id="coverage-note" class="coverage-note"></div>
+      </div>
+      <div class="sidebar-footer"><div class="storage-indicator"><i></i><span id="storage-label">Progress saved in this browser</span></div><div class="footer-actions"><button id="export-progress">Export progress ↗</button><button id="about-button">About the data</button></div></div>
+    </aside>
+    <main class="map-panel">
+      <header class="toolbar"><nav id="breadcrumbs" aria-label="Location"><button>Earth</button></nav><div class="toolbar-actions"><button id="copy-image" class="copy-image" disabled title="Copy this region, visited highlights and discovery progress as an image"><span aria-hidden="true">▣</span> Screenshot</button><div class="view-toggle" role="group" aria-label="Map projection"><button id="globe-mode" aria-pressed="true"><span aria-hidden="true">◎</span> 3D globe</button><button id="flat-mode" aria-pressed="false"><span aria-hidden="true">▱</span> 2D map</button></div></div></header>
+      <section class="map-heading"><div><div class="eyebrow" id="view-eyebrow">EARTH</div><h2 id="view-title">Earth</h2><p id="view-description">7 continents · browser-saved discoveries</p></div><span class="edition">EXPLORER EDITION<br><b>01 / EARTH</b></span></section>
+      <div id="map-stage" class="map-stage">
+        <canvas id="map" tabindex="0" role="img" aria-label="Interactive Earth. Drag to rotate. Use the region list for keyboard exploration."></canvas>
+        <div id="map-status" class="map-status" role="status"><span class="spinner"></span> Loading the world…</div>
+        <div class="map-topline"><span class="live-dot"></span><span id="map-location">EARTH / ORTHOGRAPHIC</span></div>
+        <div id="hover-card" class="hover-card" hidden><span class="small-label" id="hover-kind"></span><strong id="hover-native"></strong><span id="hover-name"></span><span id="hover-action"></span></div>
+        <div class="map-controls"><button id="up-button" class="icon-button" title="Up one level (right-click)" aria-label="Up one level" disabled>↰</button><button id="zoom-in" class="icon-button" aria-label="Zoom in">+</button><button id="zoom-out" class="icon-button" aria-label="Zoom out">−</button><button id="fit-button" class="icon-button" title="Fit current view" aria-label="Fit current view">⌖</button></div>
+        <div class="map-legend"><span><i class="legend-unvisited"></i> Unexplored</span><span><i class="legend-visited"></i> Visited</span></div>
+        <div class="compass" aria-hidden="true"><span>N</span><svg viewBox="0 0 32 32"><path d="M16 3 22 27 16 23 10 27Z" fill="currentColor"/></svg></div>
+      </div>
+      <footer class="map-footer"><p id="interaction-hint"><span class="mouse-icon" aria-hidden="true">↔</span> Drag to turn the world. Click to explore.</p><div class="keyboard-hints"><span title="Left click"><svg class="mouse-hint" viewBox="0 0 20 26" aria-hidden="true"><rect x="2" y="1" width="16" height="23" rx="8" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M3 11V9a7 7 0 0 1 6-7v9Z" fill="currentColor"/><path d="M10 1v10M2 11h16" stroke="currentColor" fill="none"/></svg><span id="left-hint">Hover a region</span></span><span title="Right click"><svg class="mouse-hint" viewBox="0 0 20 26" aria-hidden="true"><rect x="2" y="1" width="16" height="23" rx="8" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M11 2a7 7 0 0 1 6 7v2h-6Z" fill="currentColor"/><path d="M10 1v10M2 11h16" stroke="currentColor" fill="none"/></svg><span id="right-hint">At Earth</span></span><span><kbd>space</kbd> toggle hovered</span></div></footer>
+      <div id="toast" class="toast" role="status" hidden></div>
+    </main>
+  </div>
+  <dialog id="about-dialog"><div class="dialog-header"><span class="eyebrow">A SMALL NOTE ABOUT THE WORLD</span><button id="close-about" class="icon-button" aria-label="Close data information">×</button></div><h2>An atlas with honest edges.</h2><p>Country and territory outlines and first-level boundaries come from <a href="https://www.naturalearthdata.com/" target="_blank" rel="noreferrer">Natural Earth</a> (public domain). Cities and towns come from <a href="https://www.geonames.org/" target="_blank" rel="noreferrer">GeoNames</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>), with a documented population threshold and some administrative seats. China municipality district outlines additionally use <a href="https://www.geoboundaries.org/" target="_blank" rel="noreferrer">geoBoundaries</a> / © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap contributors</a> (2017 snapshot, ODbL). The compiled geographic database is available under <a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noreferrer">ODbL 1.0</a>. These are map records, not a complete register of every settlement.</p><p id="data-stats"></p><p>Native names appear when supplied or matched to a regional language. An English or source-name fallback is identified when a native label is unavailable. Some places have several official languages.</p><p>Boundaries are generalized, may be dated, and follow the source’s cartographic convention. Country lists include territories and disputed map units; their appearance is not a statement of sovereignty. Your atlas groups Hong Kong, Macau and Taiwan within China, giving 34 province-level units. This is a customized navigation convention.</p><p>Progress is the number of visited <em>immediate children</em> divided by the number of included children in the current view. A parent and its children are marked independently. Visiting a province does not automatically mark its cities.</p><p>Your progress stays in this browser profile on this device. It is restored when you return, and is not shared between profiles. Clearing site storage removes it. Export a copy to keep a backup.</p><p><a href="DATA_SOURCES.md" target="_blank">Full sources, coverage & licenses ↗</a></p></dialog>
+  <dialog id="image-dialog" aria-labelledby="image-dialog-title"><div class="dialog-header"><span class="eyebrow">A POSTCARD FROM YOUR ATLAS</span><button id="close-image" class="icon-button" aria-label="Close image preview">×</button></div><h2 id="image-dialog-title">Your region, ready to keep.</h2><p id="image-feedback">Your browser could not copy this image. Download the PNG to keep it.</p><canvas id="image-preview" tabindex="0" role="img" aria-label="Screenshot preview. Drag the map to frame it, use arrow keys to pan, or scroll to zoom. Copy image saves this exact preview."></canvas><div class="image-actions"><button id="retry-copy" class="primary-button">Copy image</button><button id="download-image" class="primary-button">Download PNG</button></div></dialog>
+</body>
+</html>

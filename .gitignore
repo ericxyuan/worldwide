@@ -1,0 +1,9 @@
+node_modules/
+.cache/
+.sites/
+.openai/.local/
+*.tar.gz
+*.tgz
+artifacts/
+test-results/
+*.log

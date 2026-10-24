@@ -1,0 +1,175 @@
+{
+  "retrievedAt": "2026-10-24T21:29:38.073Z",
+  "countryMapUnits": 255,
+  "firstLevelDivisions": 4330,
+  "settlements": 235663,
+  "localUnits": 358,
+  "nativeNameFallbacks": 11026,
+  "unmatchedSettlements": 0,
+  "omittedUnassignedSettlements": 777,
+  "omittedByCountry": {
+    "ARE": 1,
+    "AGO": 2,
+    "ABW": 2,
+    "ALD": 12,
+    "BIH": 3,
+    "BEL": 21,
+    "BFA": 1,
+    "BRN": 2,
+    "BWA": 1,
+    "AUS": 2,
+    "COD": 1,
+    "CIV": 28,
+    "CHN": 16,
+    "CYP": 14,
+    "SAH": 20,
+    "ESP": 54,
+    "FRO": 6,
+    "GBR": 2,
+    "FRA": 27,
+    "GGY": 1,
+    "GIB": 3,
+    "GRL": 4,
+    "GIN": 1,
+    "GUM": 4,
+    "GNB": 1,
+    "IDN": 5,
+    "IRL": 34,
+    "ISR": 12,
+    "IMN": 1,
+    "IRN": 1,
+    "ITA": 159,
+    "JEY": 2,
+    "KEN": 9,
+    "KIR": 22,
+    "CYM": 22,
+    "KAB": 49,
+    "LKA": 15,
+    "LUX": 9,
+    "MAR": 7,
+    "MAF": 1,
+    "MDG": 1,
+    "MHL": 24,
+    "MAC": 1,
+    "MUS": 2,
+    "MDV": 1,
+    "NCL": 1,
+    "NOR": 34,
+    "NRU": 1,
+    "PAN": 1,
+    "PYF": 3,
+    "PHL": 25,
+    "PRI": 6,
+    "SRB": 9,
+    "SYC": 1,
+    "SGP": 7,
+    "SVN": 2,
+    "SOM": 22,
+    "SXM": 3,
+    "TCA": 1,
+    "NZL": 3,
+    "TUV": 6,
+    "TWN": 6,
+    "UGA": 3,
+    "VAT": 1,
+    "VGB": 1,
+    "VNM": 21,
+    "WSM": 13,
+    "KOS": 1
+  },
+  "excludedPseudoDivisions": 1,
+  "continentConvention": "Seven continents; map units assigned once using Natural Earth CONTINENT. Ocean-island map units assigned by geographic affiliation. Territories are included and totals are map units, not a sovereign-state count.",
+  "boundaryConvention": "Natural Earth cartographic shapes with user-selected China atlas grouping of Hong Kong, Macao and Taiwan; administrative and disputed boundaries are geographic reference data.",
+  "settlementCoverage": "GeoNames cities500 population threshold and administrative seats. Records unassignable to an included division are omitted rather than mixed into division denominators. Counts describe records included here, not an exhaustive inventory of all cities/towns.",
+  "nativeNameCoverage": "Country/native-language names and local-script alternatives where supplied. English/romanized fallbacks are tagged. Native naming is incomplete; multilingual areas may have additional local names.",
+  "hierarchy": "Country-specific first level. UK uses four constituent countries and source council/county boundaries. China direct municipalities use genuine available district/county records; missing town inventories remain empty. City/town is a settlement class, not a universally uniform administrative rank.",
+  "sources": {
+    "d3-LICENSE": {
+      "url": "https://cdn.jsdelivr.net/npm/d3@7.9.0/LICENSE",
+      "sha256": "3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4",
+      "bytes": 731
+    },
+    "d3.min.js": {
+      "url": "https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js",
+      "sha256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539",
+      "bytes": 279706
+    },
+    "admin1CodesASCII.txt": {
+      "url": "https://download.geonames.org/export/dump/admin1CodesASCII.txt",
+      "sha256": "2e4867f5397acb056ea26377601b57af37cb4c81399770225018e9e439e91ad3",
+      "bytes": 151571
+    },
+    "native-countries.json": {
+      "url": "https://raw.githubusercontent.com/mledoze/countries/master/countries.json",
+      "sha256": "0d92fb23b43ae080bd439f5dc5d61a8845395fdd0af1479b433c59fe079bd6fd",
+      "bytes": 1398004
+    },
+    "china-division-names.json": {
+      "url": "https://raw.githubusercontent.com/modood/Administrative-divisions-of-China/master/dist/pcas-code.json",
+      "sha256": "eaec154ce55f9683fbae09a21cea7d8523e4074f323602cf92b6840611139c5b",
+      "bytes": 1926845
+    },
+    "admin2Codes.txt": {
+      "url": "https://download.geonames.org/export/dump/admin2Codes.txt",
+      "sha256": "1e7290b22b4e6358e55481cd7e7dd7ae0f8564ad6c67bc2349821ae749c68837",
+      "bytes": 2372069
+    },
+    "countries.geojson": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_admin_0_countries.geojson",
+      "sha256": "239eec57ac17f100a11e2536cffc56752c318b50ae765b0918ff7aab4ce8f255",
+      "bytes": 13287234
+    },
+    "cities500.zip": {
+      "url": "https://download.geonames.org/export/dump/cities500.zip",
+      "sha256": "3eb4471fba711c2e94efd3d01c30c1aa091b5434ae9b50d6a171bc2482e7fae7",
+      "bytes": 13903637
+    },
+    "opencc-THIRD-PARTY-LICENSES": {
+      "url": "https://cdn.jsdelivr.net/npm/opencc-js@1.4.2/THIRD_PARTY_LICENSES.md",
+      "sha256": "42c7dbe71c178fcca97ba945e9ac9ff360fb69bbfea4cb50556f6c65bfa59806",
+      "bytes": 10232
+    },
+    "opencc-LICENSE": {
+      "url": "https://cdn.jsdelivr.net/npm/opencc-js@1.4.2/LICENSE",
+      "sha256": "960f7fc16d8baa126802316a7df9078a383af4fb6bc60033adb28e85c08d5e5e",
+      "bytes": 1080
+    },
+    "sampled-places.geojson": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_populated_places.geojson",
+      "sha256": "9b8e3de09048ef00dfc70357dbb9fa324493f214b5e0ae4daf1aa79a8d10116b",
+      "bytes": 19359003
+    },
+    "CN.zip": {
+      "url": "https://download.geonames.org/export/dump/CN.zip",
+      "sha256": "96fa785c792f3de1eccad81060d034c1f2a25cf5db7994c2fc41f6e293999697",
+      "bytes": 32232560
+    },
+    "china-counties.geojson": {
+      "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/CHN/ADM3/geoBoundaries-CHN-ADM3_simplified.geojson",
+      "sha256": "ea64fe24f193e319ce48895f229a5b3f46d2a60f3f3df67e6172ab037e4cc8fd",
+      "bytes": 34557636
+    },
+    "opencc.full.js": {
+      "url": "https://cdn.jsdelivr.net/npm/opencc-js@1.4.2/dist/umd/full.js",
+      "sha256": "95b04abf136d9c28263773bb7d357eac80b7954d101efd23c4d09c737d3d379e",
+      "bytes": 1195473
+    },
+    "divisions.geojson": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_admin_1_states_provinces.geojson",
+      "sha256": "22d0e3ad85eb3e27f17cabf8ba2d50e554fbc27a87796ff891d958185da62fb5",
+      "bytes": 40726851
+    }
+  },
+  "progressAliases": {
+    "country:HKG": "division:CHN:HKG",
+    "country:MAC": "division:CHN:MAC",
+    "country:TWN": "division:CHN:TWN"
+  },
+  "omittedChineseNameSettlements": {
+    "HKG": 207,
+    "MAC": 0,
+    "TWN": 1
+  },
+  "chinaDivisionCount": 34,
+  "atlasGrouping": "User-selected China atlas grouping: 23 provinces including Taiwan, 5 autonomous regions, 4 direct municipalities, 2 special administrative regions (Hong Kong and Macao). All included labels for Hong Kong, Macao and Taiwan use simplified Mandarin Chinese; settlement records lacking a sourced Chinese label are omitted."
+}
