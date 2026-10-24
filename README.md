@@ -2,7 +2,7 @@
 
 A personal atlas for exploring Earth, administrative regions, and mapped settlements. Designed using the requested Fluidity plugin guidance, with the user's original `worldwide.png` icon preserved unchanged.
 
-- GitHub: https://github.com/ericxyuan/worldwide (private).
+- GitHub: https://github.com/ericxyuan/worldwide (public, preserving the owner’s visibility change).
 - ChatGPT Site: https://worldwide-atlas-ericxyuan.ericxyuan.chatgpt.site (private).
 - Site identity: `.openai/hosting.json`. The separate Sites source repository is managed by the Sites workflow; the GitHub destination is the `github` remote. Preserve both destinations.
 
